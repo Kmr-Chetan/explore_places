@@ -1,5 +1,6 @@
 import React from "react";
 import Users from "./user/pages/Users";
+import UserPlaces from './places/pages/UserPlaces';
 import NewPlaces from "./places/pages/NewPlaces";
 import {
   BrowserRouter as Router,
@@ -18,6 +19,9 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <Users />
+          </Route>
+          <Route path="/:userId/places" exact>
+            <UserPlaces/> 
           </Route>
           <Route path="/places/new" exact>
             <NewPlaces />
